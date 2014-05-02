@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Complete</title>
+	<link rel="stylesheet" type="text/css" href="complete-style.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500|Roboto+Condensed:300|Open+Sans:400,300' rel='stylesheet' type='text/css'/>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<div class="walkthrough-container">
+		<div class="explore walkthrough">
+			<span>Explore&nbsp;&nbsp;>></span>
+		</div>
+		<div class="stepone walkthrough">
+			<p>Manage your day better and accomplish more with this app!<br><br>You can view your schedule on the top and to-do list on the bottom.</p><br>
+			<p class="next">NEXT&nbsp;&nbsp;>></p>
+		</div>
+		<div class="steptwo walkthrough">
+			<p>Click events to edit their information.<br><br>Inline editing will be available on the popup.<br><br>Pressing 'Edit' button will update the information and 'Delete' button will remove the event from the calendar.</p><br>
+			<p class="next">NEXT&nbsp;&nbsp;>></p>
+		</div>
+		<div class="stepthree walkthrough">
+			<p>Click + button on the top right corner to add a task or an event.</p><br>
+			<p class="next">NEXT&nbsp;&nbsp;>></p>
+		</div>
+		<div class="stepfour walkthrough">
+			<p>Checking the todo item updates the progress circle.</p><br>
+			<p class="next">NEXT&nbsp;&nbsp;>></p>
+		</div>
+		<div class="stepfive walkthrough">
+			<p>Resize the todo list by dragging from the top.</p><br>
+			<p class="next">NEXT&nbsp;&nbsp;>></p>
+		</div>
+		<div class="stepsix walkthrough">
+			<p>Navigate to other days by swiping to left or right or by clicking weekdays on the top. (not supported in this demo)</p><br>
+			<p class="next">NEXT&nbsp;&nbsp;>></p>
+		</div>
+		<div class="stepseven walkthrough">
+			<p>Click the calendar icon on the top left corner to view more days.</p><br>
+			<p class="back-to-explore">BACK&nbsp;&nbsp;>></p>
+		</div>
+	</div>
+	<div id="template">
+		<div id="display">
+			<div id="top-bars">
+				<div id="status-bar">
+					<span class="left">CARRIER</span>
+					<span>8:00 AM</span>
+					<span class="right">100%</span>
+				</div>
+				<div id="navigation-bar">
+					<img src="images/calendar-icon.png" class="left icon calendar-icon" alt="calendar icon">
+					<img src="images/today.png" class="left icon today-icon" alt="calendar icon">
+					<span class="date">January 1</span>
+					<div class="button-block right icon">
+      					<i class="mark x"></i>
+      					<i class="mark xx"></i>
+ 					</div>
+				</div>
+			</div>
+			<div class="add-content">
+				<div class="input-line">Meeting with Ed</div>
+				<div class="event-button">+ this is an event</div>
+				<div class="task-add-button">Add Task</div>
+				<div class="add-content-event">
+					<div class="input-line">@Crepes Parisiennes</div><br>
+					<div class="input-line"><div class="checkbox-square"></div><span class="right">All Day</span></div>
+					<div class="input-line">Start <span class="right">Jan 1, 2014 10:00</span></div>
+					<div class="input-line">End <span class="right">11:00</span></div><br>
+					<div class="event-add-button">Add Event</div>
+				</div>
+			</div>
+			<div class="calendar-view">
+			</div>
+			<div class="calendar">
+				<div class="week">
+					<ul>
+						<li>MON</li>
+						<li>TUE</li>
+						<li>WED</li>
+						<li class="middle-day">THU</li>
+						<li>FRI</li>
+						<li>SAT</li>
+						<li>SUN</li>
+					</ul>
+				</div>
+				<div class="events">
+					<div class="event first">
+						<div class="time">
+							<span class="top-span">08:00</span><br>
+							<span>09:00</span>
+						</div>
+						<div class="content">
+							<span class="content-name top-span">Breakfast with Kathy</span><br>
+							<span class="content-note">@Avenue B, Bring her bday gift!</span>
+						</div>
+					</div><!--end of event-->
+					<div class="event second">
+						<div class="time">
+							<span class="top-span">09:00</span><br>
+							<span>10:00</span>
+						</div>
+						<div class="content">
+							<span class="content-name top-span">Weekly Meeting</span><br>
+							<span class="content-note">Conference #224</span>
+						</div>
+					</div><!--end of event-->
+					<div class="event added-event">
+						<div class="time">
+							<span class="top-span">10:00</span><br>
+							<span>11:00</span>
+						</div>
+						<div class="content">
+							<span class="content-name top-span">Meeting with Ed</span><br>
+							<span class="content-note">@Crepes Parisiennes</span>
+						</div>
+					</div><!-- end of event-->
+ 					<div class="event third">
+						<div class="time">
+							<span class="top-span">01:00</span><br>
+							<span>02:00</span>
+						</div>
+						<div class="content">
+							<span class="content-name top-span">Lunch with Hannah</span><br>
+							<span class="content-note">@Extraordinary Desserts</span>
+						</div>
+					</div><!-- end of event-->
+					<div class="event fourth">
+						<div class="time">
+							<span class="top-span">10:00</span><br>
+							<span>11:00</span>
+						</div>
+						<div class="content">
+							<span class="content-name top-span">Skype with Sheila</span><br>
+							<span class="content-note"></span>
+						</div>
+					</div><!-- end of event-->
+				</div>
+			</div><!--end of calendar-->
+			<div class="todo">
+				<img src='images/draggable.png' alt="resizable" class="resizable">
+				<div class="gray-circle"></div>
+				<ul class="todo-list">
+					<li class="added-todo"><img src="images/list-empty.png" alt="-">Meeting With Ted</li>
+					<li><img src="images/list-empty.png" alt="-">Email Claire</li>
+					<li><img src="images/list-empty.png" alt="-">Finish the report</li>
+					<li><img src="images/list-empty.png" alt="-">Purchase flight tickets for next week</li>
+					<li><img src="images/list-empty.png" alt="-">Send a postcard to Peter</li>
+					<li><img src="images/list-empty.png" alt="-">Buy Milk</li>
+				</ul>
+			</div><!--end of todo-->
+		</div><!--end of display-->
+		<div id="display-overlay">
+		</div>
+		<div class="event-edit">
+			<div class="event-edit-content first-edit">
+				<div class="input-line">Breakfast with Kathy</div>
+				<div class="input-line">@Avenue B, Bring her bday gift!</div><br>
+				<div class="input-line"><div class="checkbox-square"></div><span class="right">All Day</span></div>
+				<div class="input-line">Start <span class="right">Jan 1, 2014 08:00</span></div>
+				<div class="input-line">End <span class="right">09:00</span></div><br>
+				<div class="button-area">
+					<div class="button edit-button">Edit</div>
+					<div class="button delete-button">Delete</div>
+				</div>
+			</div>
+			<div class="event-edit-content second-edit">
+				<div class="input-line">Weekly Meeting</div>
+				<div class="input-line">Conference #224</div><br>
+				<div class="input-line"><div class="checkbox-square"></div><span class="right">All Day</span></div>
+				<div class="input-line">Start <span class="right">Jan 1, 2014 09:00</span></div>
+				<div class="input-line">End <span class="right">10:00</span></div><br>
+				<div class="button-area">
+					<div class="button edit-button">Edit</div>
+					<div class="button delete-button">Delete</div>
+				</div>
+			</div>
+			<div class="event-edit-content added-event-edit">
+				<div class="input-line">Meeting With Ed</div>
+				<div class="input-line">@Crepes Parisienne</div><br>
+				<div class="input-line"><div class="checkbox-square"></div><span class="right">All Day</span></div>
+				<div class="input-line">Start <span class="right">Jan 1, 2014 10:00</span></div>
+				<div class="input-line">End <span class="right">11:00</span></div><br>
+				<div class="button-area">
+					<div class="button edit-button">Edit</div>
+					<div class="button delete-button">Delete</div>
+				</div>
+			</div>
+			<div class="event-edit-content third-edit">
+				<div class="input-line">Lunch With Hannah</div>
+				<div class="input-line">@Extraordinary Desserts</div><br>
+				<div class="input-line"><div class="checkbox-square"></div><span class="right">All Day</span></div>
+				<div class="input-line">Start <span class="right">Jan 1, 2014 01:00</span></div>
+				<div class="input-line">End <span class="right">02:00</span></div><br>
+				<div class="button-area">
+					<div class="button edit-button">Edit</div>
+					<div class="button delete-button">Delete</div>
+				</div>
+			</div>
+			<div class="event-edit-content fourth-edit">
+				<div class="input-line">Skype with Sheila</div>
+				<div class="input-line"></div><br>
+				<div class="input-line"><div class="checkbox-square"></div><span class="right">All Day</span></div>
+				<div class="input-line">Start <span class="right">Jan 1, 2014 10:00</span></div>
+				<div class="input-line">End <span class="right">11:00</span></div><br>
+				<div class="button-area">
+					<div class="button edit-button">Edit</div>
+					<div class="button delete-button">Delete</div>
+				</div>
+			</div>
+		</div><!--end of display-->
+	</div><!--end of template-->
+</body>
+</html>
